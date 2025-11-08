@@ -10,7 +10,7 @@ const JournalForm = ({ onEntrySaved }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://safe-space-app.onrender.com', {
+      await axios.post('https://safe-space-app.onrender.com/api/journal', {
         content,
         tags: tags.split(',').map(tag => tag.trim())
       });
