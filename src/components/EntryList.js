@@ -7,7 +7,7 @@ const EntryList = () => {
   const [entries, setEntries] = useState([]);
 
   const fetchEntries = async () => {
-    const res = await axios.get('http://localhost:5000/api/journal');
+    const res = await axios.get('https://safe-space-app.onrender.com');
     setEntries(res.data.reverse());
   };
 
